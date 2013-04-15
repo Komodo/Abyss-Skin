@@ -1,0 +1,29 @@
+@import url("chrome://komodo/skin/plat/current/panes.less");
+@import url("chrome://komodo/skin/plat/current/toolbars.less");
+
+page toolbarbutton label,
+page statusbarpanel label
+{
+    text-shadow: none !important;
+}
+
+page textbox, page menulist
+{
+    -moz-appearance: none;
+    width: 180px;
+    padding: 2px;
+
+    background: @main-toolbox-findtoolbar-background;
+    border-radius: 8px;
+
+    border: @main-toolbox-findtoolbar-border;
+    box-shadow: @main-toolbox-findtoolbar-shadow;
+    
+    color: @main-toolbox-findtoolbar-color;
+}
+
+page menulist
+{
+    background: #161616 -moz-linear-gradient(-90deg , rgba(255,255,255,0) 0%, rgba(0,0,0,0.2) 20px);
+    border: 1px solid #262626;
+}
