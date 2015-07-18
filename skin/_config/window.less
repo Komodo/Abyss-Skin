@@ -112,7 +112,8 @@
 @statusbar-border-style:                solid;
 @statusbar-border-color:                @main-border-color;
 @statusbar-panel-border-image:          none;
-@statusbar-button-border:               1px solid transparent;
+@statusbar-button-border:               0;
+@statusbar-button-border-hover:         0;
 
 @list-tree-appearance:                       none;
 @list-tree-background:                       lighten(@window-background, 5%);
@@ -127,9 +128,9 @@
 @list-tree-item-color-selected:              lighten(@list-tree-item-color, 10%);
 @list-tree-item-color-focus:                 lighten(@list-tree-item-color, 20%);
 @list-tree-row-background:                   transparent;
-@list-tree-row-background-odd:               rgba(0, 0, 0, 0.1);
-@list-tree-row-background-selected:          -moz-linear-gradient(top, rgba(80, 157, 212, 0.05) 15%, rgba(80, 157, 212, 0.1) 100%);
-@list-tree-row-background-focus:             -moz-linear-gradient(top, rgba(80, 157, 212, 0.1) 15%, rgba(80, 157, 212, 0.2) 100%);
+@list-tree-row-background-odd:               disabled;
+@list-tree-row-background-selected:          #293239;
+@list-tree-row-background-focus:             #30404B;
 
 @list-listbox-appearance:                    @list-tree-appearance;
 @list-listbox-background:                    @list-tree-background;

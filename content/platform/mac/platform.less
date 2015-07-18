@@ -6,7 +6,12 @@ menupopup
 {
     label
     {
-        font-size: 80%;
+        // Force static font size on mac
+        // Something is causing inconsistencies making relative font sizing
+        // impossible
+        // Todo: Figure out what's causing these inconsistencies
+        // eg. pref popup and editor popup
+        font-size: 12px;
     }
 
     .menu-accel-container,
@@ -19,4 +24,38 @@ menupopup
 #main-toolboxrow
 {
     padding-bottom: 2px;
+}
+
+page[containerOrient="vertical"]
+{
+    -moz-appearance: none !important;
+}
+
+#main-toolboxrow toolbar > toolbaritem
+{
+    &, & > toolbarbutton
+    {
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+.widgetToolbarWrap,
+.widgetToolbarWrap:-moz-window-inactive,
+.widgetToolbarWrap:not(.embedded),
+.widgetToolbarWrap:not(.embedded):-moz-window-inactive
+{
+    background: transparent !important;
+}
+
+ko-pane tabpanel,
+page[containerOrient="vertical"]
+{
+    -moz-appearance: none !important;
+    background: @window-background;
+}
+
+tabs:not(.tabs-bottom) tab[selected="true"]:-moz-window-inactive
+{
+    background: @tab-selected-background !important;
 }
